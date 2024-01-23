@@ -1,0 +1,14 @@
+{
+    "name": "hexlet/code",
+    "description": "brain games project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "topmate",
+            "email": "1stbagswag@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
