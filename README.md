@@ -5,3 +5,4 @@
 ## asciinema recordings:
 
 * ### [even game](https://asciinema.org/a/bVA6P37ayu0Q9oKLVWrdhaqiO)
+* ### [calc game](https://asciinema.org/a/WYpDHPzpwIWKBlkYVNNIuM4wG)
