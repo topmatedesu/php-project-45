@@ -7,3 +7,4 @@
 * ### [even game](https://asciinema.org/a/bVA6P37ayu0Q9oKLVWrdhaqiO)
 * ### [calc game](https://asciinema.org/a/WYpDHPzpwIWKBlkYVNNIuM4wG)
 * ### [gcd game](https://asciinema.org/a/TOdcuiKsUoSrYKQEcRIZozfHr)
+* ### [progression game](https://asciinema.org/a/cjbt2GB9JWa97Ft7OtIz3NM0I)
