@@ -8,3 +8,4 @@
 * ### [calc game](https://asciinema.org/a/WYpDHPzpwIWKBlkYVNNIuM4wG)
 * ### [gcd game](https://asciinema.org/a/TOdcuiKsUoSrYKQEcRIZozfHr)
 * ### [progression game](https://asciinema.org/a/cjbt2GB9JWa97Ft7OtIz3NM0I)
+* ### [prime game](https://asciinema.org/a/CLlyuD6Zk4NPHwNApG0vASWEz)
