@@ -1,7 +1,7 @@
 {
     "name": "hexlet/code",
-    "description": "brain games project",
-    "type": "project",
+    "description": "Brain games project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -9,7 +9,7 @@
             "email": "1stbagswag@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
