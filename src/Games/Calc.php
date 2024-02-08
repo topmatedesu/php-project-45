@@ -2,28 +2,36 @@
 
 namespace Php\Project\Games\Calc;
 
-use function Php\Project\Engine\game;
+use function Php\Project\Engine\runGame;
 
-function calc()
+use const Php\Project\Engine\ROUNDS_COUNT;
+const DESCRIPTION = 'What is the result of the expression?';
+
+function calculate(int $number1, int $number2, string $operator)
 {
-    $task = 'What is the result of the expression?';
-    $result = [];
+    switch ($operator) {
+        case "+":
+            return $number1 + $number2;
+        case "-":
+            return $number1 - $number2;
+        case "*":
+            return $number1 * $number2;
+    }
+}
 
-    for ($i = 0; $i < 3; $i++) {
-        $num1 = rand(1, 100);
-        $num2 = rand(1, 100);
-        switch (mt_rand(1, 3)) {
-            case 1:
-                $result["$num1 + $num2"] = $num1 + $num2;
-                break;
-            case 2:
-                $result["$num1 - $num2"] = $num1 - $num2;
-                break;
-            case 3:
-                $result["$num1 * $num2"] = $num1 * $num2;
-                break;
-        }
+function runCalc()
+{
+    $gameData = [];
+
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
+        $randNum1 = rand(1, 100);
+        $randNum2 = rand(1, 100);
+        $operators = ['+', '-', '*'];
+        $randOperator = $operators[array_rand($operators)];
+        $question = "{$randNum1} {$randOperator} {$randNum2}";
+        $correctAnswer = calculate($randNum1, $randNum2, $randOperator);
+        $gameData[] = [$question, $correctAnswer];
     }
 
-    game($task, $result);
+    runGame(DESCRIPTION, $gameData);
 }
