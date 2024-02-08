@@ -5,6 +5,7 @@ namespace Php\Project\Games\Gcd;
 use function Php\Project\Engine\runGame;
 
 use const Php\Project\Engine\ROUNDS_COUNT;
+
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 function runGcd()

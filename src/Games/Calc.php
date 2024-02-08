@@ -5,6 +5,7 @@ namespace Php\Project\Games\Calc;
 use function Php\Project\Engine\runGame;
 
 use const Php\Project\Engine\ROUNDS_COUNT;
+
 const DESCRIPTION = 'What is the result of the expression?';
 
 function calculate(int $number1, int $number2, string $operator)

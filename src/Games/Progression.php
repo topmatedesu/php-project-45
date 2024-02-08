@@ -5,6 +5,7 @@ namespace Php\Project\Games\Progression;
 use function Php\Project\Engine\runGame;
 
 use const Php\Project\Engine\ROUNDS_COUNT;
+
 const DESCRIPTION = 'What number is missing in the progression?';
 
 function runProgression()

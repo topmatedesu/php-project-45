@@ -5,6 +5,7 @@ namespace Php\Project\Games\Even;
 use function Php\Project\Engine\runGame;
 
 use const Php\Project\Engine\ROUNDS_COUNT;
+
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven(int $number)
