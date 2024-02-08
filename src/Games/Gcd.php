@@ -2,31 +2,33 @@
 
 namespace Php\Project\Games\Gcd;
 
-use function Php\Project\Engine\game;
+use function Php\Project\Engine\runGame;
 
-function gcd()
+use const Php\Project\Engine\ROUNDS_COUNT;
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
+
+function runGcd()
 {
-    $task = 'Find the greatest common divisor of given numbers.';
-    $result = [];
-    $numbers = [];
-    $answer = [];
+    $gameData = [];
+    $question = [];
+    $correctAnswer = [];
 
-    for ($i = 0; $i < 3; $i++) {
-        $num1 = rand(1, 100);
-        $num2 = rand(1, 100);
-        $numbers[$i] = "$num1 $num2";
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
+        $randNum1 = rand(1, 100);
+        $randNum2 = rand(1, 100);
+        $question = "{$randNum1} {$randNum2}";
 
-        while ($num1 != $num2) {
-            if ($num1 > $num2) {
-                $num1 = $num1 - $num2;
+        while ($randNum1 != $randNum2) {
+            if ($randNum1 > $randNum2) {
+                $randNum1 = $randNum1 - $randNum2;
             } else {
-                $num2 = $num2 - $num1;
+                $randNum2 = $randNum2 - $randNum1;
             }
         }
 
-        $answer[$i] = $num2;
+        $correctAnswer = $randNum2;
+        $gameData[] = [$question, $correctAnswer];
     }
 
-    $result = array_combine($numbers, $answer);
-    game($task, $result);
+    runGame(DESCRIPTION, $gameData);
 }
