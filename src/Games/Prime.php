@@ -2,11 +2,14 @@
 
 namespace Php\Project\Games\Prime;
 
-use function Php\Project\Engine\game;
+use function Php\Project\Engine\runGame;
+
+use const Php\Project\Engine\ROUNDS_COUNT;
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime(int $number)
 {
-    for ($i = 2; $i < $number; $i++) {
+    for ($i = 2; $i < $number; $i += 1) {
         if ($number % $i === 0) {
             return false;
         }
@@ -15,28 +18,16 @@ function isPrime(int $number)
     return true;
 }
 
-function prime()
+function runPrime()
 {
-    $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $result = [];
-    $randomNumbers = [];
-    $givenNumbers = [];
-    $answer = [];
-
-    for ($i = 0; $i < 3; $i++) {
-        $randomNumbers[] = rand(2, 50);
+    $gameData = [];
+    
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
+        $randomNumber = rand(2, 50);
+        $question = $randomNumber;
+        $correctAnswer = isPrime($randomNumber) ? 'yes' : 'no';
+        $gameData[] = [$question, $correctAnswer];
     }
 
-    foreach ($randomNumbers as $number) {
-        $givenNumbers[] = $number;
-
-        if (isPrime($number) === true) {
-            $answer[] = 'yes';
-        } else {
-            $answer[] = 'no';
-        }
-    }
-
-    $result = array_combine($givenNumbers, $answer);
-    game($task, $result);
+    runGame(DESCRIPTION, $gameData);
 }
