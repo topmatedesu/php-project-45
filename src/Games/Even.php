@@ -2,21 +2,25 @@
 
 namespace Php\Project\Games\Even;
 
-use function Php\Project\Engine\game;
+use function Php\Project\Engine\runGame;
 
-function even()
+use const Php\Project\Engine\ROUNDS_COUNT;
+const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+function isEven(int $number)
 {
-    $task = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $result = [];
+    return ($number % 2) === 0;
+}
 
-    for ($i = 0; $i < 3; $i++) {
-        $number = rand(1, 100);
-        if ($number % 2 === 0) {
-            $result[$number] = 'yes';
-        } else {
-            $result[$number] = 'no';
-        }
+function runEven()
+{
+    $gameData = [];
+
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
+        $randomNumber = rand(1, 100);
+        $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
+        $gameData[] = [$randomNumber, $correctAnswer];
     }
 
-    game($task, $result);
+    runGame(DESCRIPTION, $gameData);
 }
