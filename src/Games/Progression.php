@@ -33,7 +33,7 @@ function runProgression()
         $correctAnswer = $progression[$randNum];
         $progression[$randNum] = '..';
         $question = implode(' ', $progression);
-        $gameData[] = [$question, $correctAnswer];
+        $gameData[] = [$question, (string) $correctAnswer];
     }
 
     runGame(DESCRIPTION, $gameData);

@@ -30,7 +30,7 @@ function runGcd()
         $randNum2 = rand(10, 100);
         $question = "{$randNum1} {$randNum2}";
         $correctAnswer = getGcd($randNum1, $randNum2);
-        $gameData[] = [$question, $correctAnswer];
+        $gameData[] = [$question, (string) $correctAnswer];
     }
 
     runGame(DESCRIPTION, $gameData);

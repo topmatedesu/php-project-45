@@ -27,7 +27,7 @@ function runPrime()
         $randomNumber = rand(2, 50);
         $question = $randomNumber;
         $correctAnswer = isPrime($randomNumber) ? 'yes' : 'no';
-        $gameData[] = [$question, $correctAnswer];
+        $gameData[] = [$question, (string) $correctAnswer];
     }
 
     runGame(DESCRIPTION, $gameData);

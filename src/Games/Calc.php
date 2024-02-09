@@ -33,7 +33,7 @@ function runCalc()
         $randOperator = $operators[array_rand($operators)];
         $question = "{$randNum1} {$randOperator} {$randNum2}";
         $correctAnswer = calculate($randNum1, $randNum2, $randOperator);
-        $gameData[] = [$question, $correctAnswer];
+        $gameData[] = [$question, (string) $correctAnswer];
     }
 
     runGame(DESCRIPTION, $gameData);

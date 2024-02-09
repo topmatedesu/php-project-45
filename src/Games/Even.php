@@ -20,7 +20,7 @@ function runEven()
     for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $randomNumber = rand(1, 100);
         $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
-        $gameData[] = [$randomNumber, $correctAnswer];
+        $gameData[] = [$randomNumber, (string) $correctAnswer];
     }
 
     runGame(DESCRIPTION, $gameData);
